@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="ng-for">
+        <h1>NG-FOR</h1>
+        <ul>
+            <li *ngFor="let item of items">
+                <span>{{ item }}</span>
+            </li>
+        </ul>
+    </div>
+    <div class="ng-if">
+        <h1>NG-IF</h1>
+        <ul>
+            <div *ngFor="let item of items">
+                <li *ngIf="selectedItem === item ">{{ item }}</li>
+            </div>
+        </ul>
+    </div>
+    <div class="ng-switch">
+        <h1>NG-SWITCH</h1>
+        <ul>
+            <div *ngFor="let item of items">
+                <li [ngSwitch]="item">
+                    <div *ngSwitchCase="item">
+                        <span>{{getIndex(item)}}</span>
+                    </div>
+                </li>
+            </div>
+        </ul>
+    </div>
+</div>
