@@ -19,7 +19,4 @@ export class ListItemsComponent {
   public getIndex(item: string): number {
     return this.selectedItemIndex[item];
   }
-  /**
-   * TODO: USE NG SWITCH FOR SAME ISSUE AS PREVIOUS, BUT RETURN 1 IN A, 2 IN B, 3 IN C
-   */
 }
